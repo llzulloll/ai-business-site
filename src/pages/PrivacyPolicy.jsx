@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-export default function TermsOfService() {
+export default function PrivacyPolicy() {
     return (
         <div style={{ background: '#f8fafc', minHeight: '100vh', padding: '4rem 1rem' }}>
             <motion.div
@@ -20,7 +20,7 @@ export default function TermsOfService() {
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         marginBottom: '1rem'
-                    }}>Terms of Service</h1>
+                    }}>Privacy Policy</h1>
                     <div style={{
                         display: 'inline-block',
                         padding: '0.4rem 1rem',
@@ -30,7 +30,7 @@ export default function TermsOfService() {
                         fontSize: '0.9rem',
                         fontWeight: '600'
                     }}>
-                        Last Updated: {new Date().toLocaleDateString()}
+                        Effective Date: {new Date().toLocaleDateString()}
                     </div>
                 </div>
 
@@ -45,41 +45,49 @@ export default function TermsOfService() {
                 }}>
                     <div style={{ marginBottom: '3rem', borderBottom: '1px solid #e2e8f0', paddingBottom: '2rem' }}>
                         <p style={{ fontSize: '1.1rem', color: '#64748b' }}>
-                            Welcome to Fluxaro. Please read these terms carefully before using our AI services and website solutions.
+                            Fluxaro ("we", "us", or "our") operates the website and provides AI automation services. This policy outlines how we handle your data.
                         </p>
                     </div>
 
                     <div className="legal-content">
-                        <Section number="1" title="Acceptance of Terms">
-                            By accessing and using Fluxaro's AI services ("Service"), you accept and agree to be bound by the terms and provision of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services.
+                        <Section number="1" title="Information Collection">
+                            <p style={{ marginBottom: '1rem' }}>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+                            <ul style={{ paddingLeft: '1.5rem', listStyle: 'disc' }}>
+                                <li style={{ marginBottom: '0.5rem' }}><strong>Personal Data:</strong> Personally identifiable information including Email address, First/Last name, Phone number, and Business details.</li>
+                                <li><strong>Usage Data:</strong> Information on how the Service is accessed (IP address, browser type, pages visited).</li>
+                            </ul>
                         </Section>
 
-                        <Section number="2" title="Description of Service">
-                            Fluxaro provides AI-powered automation solutions, including but not limited to AI Voice Receptionists and High-Conversion Websites. We reserve the right to modify, suspend, or discontinue the Service at any time for any reason with or without notice.
+                        <Section number="2" title="Use of Data">
+                            <p style={{ marginBottom: '1rem' }}>Fluxaro uses the collected data for various purposes:</p>
+                            <ul style={{ paddingLeft: '1.5rem', listStyle: 'disc' }}>
+                                <li style={{ marginBottom: '0.5rem' }}>To provide and maintain the Service</li>
+                                <li style={{ marginBottom: '0.5rem' }}>To notify you about changes to our Service</li>
+                                <li style={{ marginBottom: '0.5rem' }}>To allow active participation (e.g. AI chatbots)</li>
+                                <li>To provide customer support and analysis</li>
+                            </ul>
                         </Section>
 
-                        <Section number="3" title="Subscription & Payments">
-                            Services are billed on a one-time setup fee basis plus usage costs, or as a monthly subscription depending on the plan selected. You agree to provide current, complete, and accurate purchase and account information for all purchases made via our store.
+                        <Section number="3" title="Data Transfer & Partners">
+                            <p style={{ marginBottom: '1rem' }}>
+                                We may employ third party companies to facilitate our Service. Currently, we utilize:
+                            </p>
+                            <ul style={{ paddingLeft: '1.5rem', listStyle: 'disc' }}>
+                                <li style={{ marginBottom: '0.5rem' }}><strong>OpenAI:</strong> NLP and AI generation.</li>
+                                <li style={{ marginBottom: '0.5rem' }}><strong>AWS:</strong> Cloud infrastructure.</li>
+                                <li><strong>Stripe:</strong> Payment processing.</li>
+                            </ul>
+                            <p style={{ marginTop: '1rem', fontSize: '0.9rem', fontStyle: 'italic' }}>
+                                These providers only access data necessary to perform their tasks and are obligated not to disclose it.
+                            </p>
                         </Section>
 
-                        <Section number="4" title="Intellectual Property">
-                            The Service and its original content, features, and functionality are and will remain the exclusive property of Fluxaro and its licensors. You are granted a limited license to access and use the Service for your own business purposes.
+                        <Section number="4" title="Security">
+                            The security of your data is important to us. We use commercially acceptable means to protect your Personal Data, but remember that no method of transmission over the Internet is 100% secure.
                         </Section>
 
-                        <Section number="5" title="User Conduct">
-                            You agree not to use the Service for any unlawful purpose or any purpose prohibited under this clause. You agree not to use the Service in any way that could damage the Service, the services, or the general business of Fluxaro.
-                        </Section>
-
-                        <Section number="6" title="Termination">
-                            We may terminate your access to the Service, without cause or notice, which may result in the forfeiture and destruction of all information associated with you. All provisions of this Agreement that by their nature should survive termination shall survive termination.
-                        </Section>
-
-                        <Section number="7" title="Limitation of Liability">
-                            In no event shall Fluxaro, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
-                        </Section>
-
-                        <Section number="8" title="Governing Law">
-                            This Agreement is governed in accordance with the laws of the United States.
+                        <Section number="5" title="Contact Us">
+                            If you have any questions about this Privacy Policy, please contact us via our website or at privacy@fluxaro.tech.
                         </Section>
                     </div>
 
@@ -87,9 +95,6 @@ export default function TermsOfService() {
                         <Link to="/" style={{ fontWeight: '600', color: '#0f3c64', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                             ← Return to Home
                         </Link>
-                        <p style={{ margin: 0, fontSize: '0.9rem', color: '#94a3b8' }}>
-                            Questions? <Link to="/contact" style={{ color: '#0f3c64', textDecoration: 'underline' }}>Contact Support</Link>
-                        </p>
                     </div>
                 </div>
             </motion.div>
@@ -121,8 +126,8 @@ const Section = ({ number, title, children }) => (
             }}>{number}</span>
             {title}
         </h2>
-        <p style={{ color: '#475569', paddingLeft: '3.2rem', margin: 0 }}>
+        <div style={{ color: '#475569', paddingLeft: '3.2rem' }}>
             {children}
-        </p>
+        </div>
     </div>
 )
