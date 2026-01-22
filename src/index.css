@@ -157,13 +157,45 @@ button {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+    /* Force smaller hero text */
+  }
+
+  .section {
+    padding: 3rem 0;
+    /* Reduce vertical padding */
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    /* Full width buttons on mobile */
+    justify-content: center;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
   .grid-2 {
     grid-template-columns: 1fr 1fr;
   }
 
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .desktop-hidden {
+    display: none !important;
   }
 }
 
