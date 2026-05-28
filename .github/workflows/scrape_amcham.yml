@@ -1,0 +1,35 @@
+name: Scrape AmCham Thailand – No-Website Leads
+
+on:
+  workflow_dispatch:   # manual trigger — press "Run workflow" on GitHub
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Install Playwright Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run scraper
+        run: python scraper/scrape_amcham.py
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amcham-leads
+          path: |
+            thailand_leads_no_website.csv
+            errors.log
+          retention-days: 30
