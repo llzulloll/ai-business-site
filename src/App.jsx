@@ -13,6 +13,7 @@ import WebsiteRevampDemo from './pages/demos/WebsiteRevampDemo'
 import DemosPage from './pages/DemosPage'
 import ServicesPage from './pages/ServicesPage'
 import AIReceptionistDemo from './pages/demos/AIReceptionistDemo'
+import StockPredictionDemo from './pages/demos/StockPredictionDemo'
 import ScrollToTop from './components/ScrollToTop' // existing
 import GlobalChatWidget from './components/GlobalChatWidget'
 
@@ -112,6 +113,7 @@ function App() {
           } />
           <Route path="/demos/revamp" element={<WebsiteRevampDemo />} />
           <Route path="/demos/ai-receptionist" element={<AIReceptionistDemo />} />
+          <Route path="/demos/stock-prediction" element={<StockPredictionDemo />} />
         </Routes>
       </div>
     </Router>
