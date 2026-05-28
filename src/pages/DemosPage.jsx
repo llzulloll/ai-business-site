@@ -11,6 +11,15 @@ export default function DemosPage() {
             path: "/demos/revamp",
             color: "linear-gradient(135deg, #2c3e50 0%, #000000 100%)",
             features: ["Interactive Comparison", "Before/After Slider", "Instant Modernization"]
+        },
+        {
+            id: "stock-prediction",
+            title: "AI Stock Predictor",
+            description: "Live AI-powered price forecasting using Kronos, a foundation model trained on 45+ global exchanges. Pulls real market data and gives you a buy/sell signal.",
+            path: "/demos/stock-prediction",
+            color: "linear-gradient(135deg, #0d0d1a 0%, #1a0a2e 50%, #0a1628 100%)",
+            features: ["Real Market Data", "Buy / Sell Signal", "Monte Carlo Forecast", "8 Tickers"],
+            icon: "📈"
         }
     ]
     const aiDemos = [
@@ -135,7 +144,7 @@ export default function DemosPage() {
                                     justifyContent: 'center',
                                     position: 'relative'
                                 }}>
-                                    <div style={{ fontSize: '4rem' }}>✨</div>
+                                    <div style={{ fontSize: '4rem' }}>{demo.icon || '✨'}</div>
                                     <div style={{
                                         position: 'absolute',
                                         bottom: '1rem',
